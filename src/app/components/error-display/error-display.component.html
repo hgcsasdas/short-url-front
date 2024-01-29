@@ -1,0 +1,19 @@
+<!-- error-display.component.html -->
+@if (error && error != null) {
+<!-- error-display.component.html -->
+<section  class="w-full py-8  bg-emerald-800">
+  <div class="w-3/4 mx-auto p-8 bg-red-600 rounded-lg text-center shadow-black">
+    <h2 class="text-3xl font-bold text-white mb-4">Ha ocurrido un error</h2>
+    <p class="text-white opacity-75 mb-4">Inténtelo de nuevo</p>
+    <p class="text-white opacity-75 mb-4">{{ error.message }}</p>
+
+    <button
+      type="button"
+      (click)="closeError()"
+      class="bg-white text-red-800 py-2 px-4 rounded-md hover:bg-gray-300"
+    >
+      Cerrar
+    </button>
+  </div>
+</section>
+}

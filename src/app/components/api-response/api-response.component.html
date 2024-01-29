@@ -1,0 +1,39 @@
+@if (existeLink) {
+<section class="w-full py-8 bg-emerald-800">
+  <div
+    class="w-3/4 mx-auto p-8 bg-emerald-600 rounded-lg text-center shadow-black"
+  >
+    <h2 class="text-3xl font-bold text-white mb-4">Tú link acortado es:</h2>
+    <p class="text-white opacity-75 mb-4">
+      <a
+        class="underline text-emerald-300 hover:text-emerald-500"
+        href="{{ linkAcortado }}"
+      >
+        {{ linkAcortado }}
+      </a>
+    </p>
+
+    <button
+      type="button"
+      (click)="createQrLink()"
+      class="bg-white text-emerald-800 py-2 px-4 rounded-md hover:bg-gray-300"
+    >
+      Generar QR
+    </button>
+    @if (qrCodeBase64 && existeQr) {
+    <div
+      class="flex w-1/4 m-auto justify-center items-center bg-emerald-800 my-5 p-5 rounded-lg shadow-md"
+    >
+      <img
+        [src]="'data:image/png;base64,' + qrCodeBase64"
+        alt="Código QR"
+        class="w-40 h-auto border-2 border-gray-800 rounded-md"
+      />
+    </div>
+    }
+  </div>
+</section>
+} @else {
+  <app-error-display></app-error-display>
+
+}

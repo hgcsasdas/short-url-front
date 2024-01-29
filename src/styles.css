@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Estiliza la barra de desplazamiento para todos los elementos y el cuerpo del documento */
+::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Estiliza el track (el riel de fondo de la barra de desplazamiento) */
+::-webkit-scrollbar-track {
+  --tw-text-opacity: 1;
+  background: rgb(6 95 70 / var(--tw-text-opacity)); /* Color de fondo y transparencia */
+}
+
+/* Estiliza el handle (la parte de la barra de desplazamiento que se mueve) */
+::-webkit-scrollbar-thumb {
+  --tw-text-opacity: 1;
+  background-color:   rgb(16 185 129 / var(--tw-text-opacity));
+  border-radius: 10px; /* Bordes redondeados */
+}

@@ -6,7 +6,8 @@ import { AcortarLinksResponseDTO } from '../dto/acortarLinkResponseDTO';
 import { qrGenerateResponseDTO } from '../dto/qrGenerateResponseDTO';
 import { ErrorService } from './error-service.service';
 
-const baseUrl = 'http://localhost:8080/api/links';
+
+const baseUrl = (window as any).env?.API_BASE_URL as string;
 
 @Injectable({
   providedIn: 'root',
@@ -22,7 +23,7 @@ export class LinksServiceService {
           console.log(error);
 
           this.errorService.handleError(error);
-          return []; // Puedes retornar un valor por defecto o seguir lanzando el error
+          return [];
         })
       );
   }
@@ -33,7 +34,7 @@ export class LinksServiceService {
       .pipe(
         catchError((error) => {
           this.errorService.handleError(error.error);
-          return []; // Puedes retornar un valor por defecto o seguir lanzando el error
+          return [];
         })
       );
   }
@@ -44,7 +45,7 @@ export class LinksServiceService {
       .pipe(
         catchError((error) => {
           this.errorService.handleError(error);
-          return []; // Puedes retornar un valor por defecto o seguir lanzando el error
+          return [];
         })
       );
   }

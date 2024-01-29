@@ -27,7 +27,6 @@ export class RedirectComponentComponent implements OnInit {
     const linkAcortado = this.route.snapshot.paramMap.get('linkAcortado');
 
 
-    // Asegúrate de que linkAcortado no sea undefined
     if (linkAcortado) {
       this.linksService.getLink(linkAcortado).subscribe((response) => {
         if (response && response.redirectToLink) {

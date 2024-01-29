@@ -26,9 +26,12 @@ export class UrlFormComponent {
   linkAcortado?: AcortarLinksResponseDTO;
   originalLink = '';
 
+  isLoading = false;
+
   constructor(private linksService: LinksServiceService, private sharedDataService: SharedDataService) {}
 
   createShortLink() {
+    this.isLoading = true;
     this.sharedDataService.setExisteLink(false);
     this.sharedDataService.setExisteQr(false);
     // Llama a la función del servicio para crear un enlace acortado
@@ -40,6 +43,7 @@ export class UrlFormComponent {
         this.sharedDataService.setLinkAcortado(this.linkAcortado?.linkAcortado || '');
         this.sharedDataService.setExisteLink(true);
         this.sharedDataService.setExisteQr(false);
+        this.isLoading = false;
       });
   }
 

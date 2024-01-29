@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "postbuild": "sed -i 's#${API_BASE_URL}#'${API_BASE_URL}'#' dist/your-app-folder/netlify-config.js",
+    "postbuild": "sed -i 's#${API_BASE_URL}#'${API_BASE_URL}'#' dist/shortener-link-frontend/netlify-config.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

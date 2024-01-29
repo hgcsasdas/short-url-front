@@ -23,7 +23,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "netlify-config.js"
+              "src/netlify-config.js"
             ],
             "styles": [
               "src/styles.css"

@@ -21,7 +21,7 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
+              "src/iconShortUrl.ico",
               "src/assets",
               "src/_redirects",
               "src/netlify-config.js"

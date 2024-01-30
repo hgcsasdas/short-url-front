@@ -19,16 +19,26 @@
         [(ngModel)]="originalLink"
         name="linkInput"
       />
+
+      @if (isLoading) {
+
+      <button
+      class=" text-emerald-800 py-2 px-4 rounded-md bg-gray-300"
+      disabled
+      >
+        Acortar
+      </button>
+
+      <div class="my-4">
+        <div class="loader"></div>
+      </div>
+      } @else {
       <button
         type="submit"
         class="bg-white text-emerald-800 py-2 px-4 rounded-md hover:bg-gray-300"
       >
         Acortar
       </button>
-      @if (isLoading) {
-      <div class="my-4">
-        <div class="loader"></div>
-      </div>
       }
     </form>
   </div>

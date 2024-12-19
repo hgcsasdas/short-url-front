@@ -27,7 +27,7 @@ export class ApiResponseComponent implements OnInit {
   existeQr = false;
 
   //Plataforma de despliegue
-  urlBase = 'https://csn-s-url.netlify.app/';
+  urlBase = 'https://short-url.hgccarlos.es/';
 
   //qrVar
   qrCodeBase64 = '';

@@ -6,13 +6,15 @@ import { AcortarLinksResponseDTO } from '../dto/acortarLinkResponseDTO';
 import { qrGenerateResponseDTO } from '../dto/qrGenerateResponseDTO';
 import { ErrorService } from './error-service.service';
 
-
-const baseUrl = (window as any).env?.API_BASE_URL as string;
+//const baseUrl = (window as any).env?.API_BASE_URL as string;
+const baseUrl = "https://short-url-backend.hgccarlos.es/api/links";
 
 @Injectable({
   providedIn: 'root',
 })
 export class LinksServiceService {
+  
+
   constructor(private http: HttpClient, private errorService: ErrorService) {}
 
   // Obtener el enlace redirigido

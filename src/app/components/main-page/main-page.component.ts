@@ -21,12 +21,12 @@ import { UrlFormComponent } from '../url-form/url-form.component';
   ],
   template: `
     <app-header></app-header>
-    <div class="h-[90vh]">
+    <div class="h-[85vh] bg-emerald-800 ">
       <app-url-form></app-url-form>
       <app-api-response></app-api-response>
       <app-demo></app-demo>
+      <app-footer></app-footer>
     </div>
-    <app-footer></app-footer>
   `,
   styles: [],
 })

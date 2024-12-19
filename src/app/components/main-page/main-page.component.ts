@@ -10,16 +10,24 @@ import { UrlFormComponent } from '../url-form/url-form.component';
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, UrlFormComponent, DemoComponent, FooterComponent, ApiResponseComponent],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    HeaderComponent,
+    UrlFormComponent,
+    DemoComponent,
+    FooterComponent,
+    ApiResponseComponent,
+  ],
   template: `
     <app-header></app-header>
-    <app-url-form></app-url-form>
-    <app-api-response></app-api-response>
-    <app-demo></app-demo>
+    <div class="h-[90vh]">
+      <app-url-form></app-url-form>
+      <app-api-response></app-api-response>
+      <app-demo></app-demo>
+    </div>
     <app-footer></app-footer>
   `,
-  styles: []
+  styles: [],
 })
-export class MainPageComponent {
-
-}
+export class MainPageComponent {}
